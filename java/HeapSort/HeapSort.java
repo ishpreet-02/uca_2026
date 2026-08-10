@@ -54,25 +54,35 @@ public class HeapSort {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    int[] randomSortedArray = {1, 5, 6, 2, 1, 3, 5, 6};
+    int[] ascendingSorted = {1, 2, 3, 4, 5};
+    int[] descendingSorted = {5, 4, 3, 2, 1};
 
-        System.out.print("Enter number of elements: ");
-        int n = sc.nextInt();
+    heapSort(randomSortedArray);
+    heapSort(ascendingSorted);
+    heapSort(descendingSorted);
 
-        int[] arr = new int[n];
+    // Random array
+    System.out.println("Random Sorted Array:");
 
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        heapSort(arr);
-
-        System.out.println("\nAfter sorting:");
-
-        for (int x : arr) {
-            System.out.print(x + " ");
-        }
-
-        sc.close();
+    for (int i = 0; i < randomSortedArray.length; i++) {
+        System.out.print(randomSortedArray[i] + " ");
     }
+
+    // Ascending input
+    System.out.println("\nAscending Sorted answer:");
+
+    for (int i = 0; i < ascendingSorted.length; i++) {
+        System.out.print(ascendingSorted[i] + " ");
+    }
+
+    // Descending input
+    System.out.println("\nDescending Sorted answer:");
+
+    for (int i = 0; i < descendingSorted.length; i++) {
+        System.out.print(descendingSorted[i] + " ");
+    }
+
+    System.out.println();
+}
 }
