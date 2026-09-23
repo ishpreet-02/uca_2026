@@ -3,3 +3,4 @@
 .DS_Store
 main_app
 .vscode/
+*.exe
